@@ -6,6 +6,7 @@ import Tasks from "./components/Tasks";
 import "./App.css";
 import AddTask from './components/AddTask';
 import Header from './components/Header';
+import TaskDetails from './components/TaskDetails';
 
 const App = () => {
   const [tasks, setTasks] = useState([
@@ -67,9 +68,9 @@ const App = () => {
                         handleTaskDeletion={handleTaskDeletion}
                     />              
                   </>
-
             )}
-        />
+          />
+          <Route path="/:taskTitle" exact component={TaskDetails}/>
       </div>
     </Router>
   );
